@@ -5,16 +5,15 @@ from pathlib import Path
 
 # ── Paths ──────────────────────────────────────────────────────────────────
 ROOT = Path(__file__).parent.parent
-DATA_RAW = ROOT / "data" / "raw"
 DATA_PROCESSED = ROOT / "data" / "processed"
 OUTPUTS = ROOT / "outputs"
 SCORES_DIR = OUTPUTS / "scores"
 MAPS_DIR = OUTPUTS / "maps"
 
-# Symlink source data here (don't copy the large files)
-MAHARASHTRA_GEOJSON = DATA_RAW / "ADB_Innovation_Maharashtra.geojson"
-THAILAND_GEOJSON = DATA_RAW / "ADB_Innovation_Thailand.geojson"
-HELMET_SPI_XLSX = DATA_RAW / "Archive" / "Road_Safety_Performance_Indicators_(Helmet_Wearing_results)_(adb_dashboard_data_v02).xlsx"
+# Data files live in the project root (alongside the code)
+MAHARASHTRA_GEOJSON = ROOT / "ADB_Innovation_Maharashtra.geojson"
+THAILAND_GEOJSON = ROOT / "ADB_Innovation_Thailand.geojson"
+HELMET_SPI_XLSX = ROOT / "Archive" / "Road_Safety_Performance_Indicators_(Helmet_Wearing_results)_(adb_dashboard_data_v02).xlsx"
 
 # ── Safe System Speed Thresholds (km/h) ───────────────────────────────────
 # Based on WHO Safe System principles and UNECE road safety targets.
