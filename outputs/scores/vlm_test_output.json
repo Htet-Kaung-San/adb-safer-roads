@@ -1,0 +1,112 @@
+{
+  "47417": {
+    "pedestrian_infra": 0.0,
+    "cyclist_infra": 0.0,
+    "roadside_activity": 0.0,
+    "road_condition": 0.8,
+    "signage_quality": 0.65,
+    "vru_exposure": 0.25,
+    "visibility_quality": 0.8,
+    "reasoning": "The image shows a clear, well-maintained road with no visible pedestrians, cyclists, or market activity. The road condition and signage are good, and the visibility is clear. However, there is no pedestrian or cyclist infrastructure present.",
+    "image_count": 2
+  },
+  "23622": {
+    "pedestrian_infra": 0.0,
+    "cyclist_infra": 0.0,
+    "roadside_activity": 0.0,
+    "road_condition": 0.8,
+    "signage_quality": 0.5667,
+    "vru_exposure": 0.5,
+    "visibility_quality": 0.8333,
+    "reasoning": "The image shows a clear road with good visibility, but there is no pedestrian or cyclist infrastructure, and no visible roadside activity. The road condition is good, but the signage is not clearly visible, and there is some exposure of vulnerable road users (VRU) in the frame.",
+    "image_count": 3
+  },
+  "16167": {
+    "pedestrian_infra": 0.0,
+    "cyclist_infra": 0.0,
+    "roadside_activity": 0.0,
+    "road_condition": 0.8,
+    "signage_quality": 0.8,
+    "vru_exposure": 0.8,
+    "visibility_quality": 0.8,
+    "reasoning": "The image shows a well-maintained road with good visibility and clear signage, but lacks pedestrian and cyclist infrastructure and roadside activities.",
+    "image_count": 3
+  },
+  "30090": {
+    "pedestrian_infra": 0.15,
+    "cyclist_infra": 0.1,
+    "roadside_activity": 0.25,
+    "road_condition": 0.75,
+    "signage_quality": 0.55,
+    "vru_exposure": 0.65,
+    "visibility_quality": 0.8,
+    "reasoning": "The image shows a relatively safe road with good road surface and clear sightlines, but lacks pedestrian and cyclist infrastructure and clear signage.",
+    "image_count": 2
+  },
+  "19658": {
+    "pedestrian_infra": 0.0,
+    "cyclist_infra": 0.0,
+    "roadside_activity": 0.0,
+    "road_condition": 0.8,
+    "signage_quality": 0.8,
+    "vru_exposure": 0.8,
+    "visibility_quality": 0.8,
+    "reasoning": "The image shows a clear road with good visibility, but there is no pedestrian or cyclist infrastructure, and no roadside activity is visible. The road condition is good, and the signage is clear. However, there is no pedestrian or cyclist exposure in the frame.",
+    "image_count": 3
+  },
+  "19791": {
+    "pedestrian_infra": 0.0,
+    "cyclist_infra": 0.0,
+    "roadside_activity": 0.0,
+    "road_condition": 0.6,
+    "signage_quality": 0.3333,
+    "vru_exposure": 0.6,
+    "visibility_quality": 0.6333,
+    "reasoning": "The image shows a road with no visible pedestrian or cyclist infrastructure, limited roadside activity, and some road condition issues. There is no signage visible, and the visibility is moderate due to the presence of power lines and trees. The presence of vehicles and pedestrians suggests some level of exposure.",
+    "image_count": 3
+  },
+  "16094": {
+    "pedestrian_infra": 0.0,
+    "cyclist_infra": 0.0,
+    "roadside_activity": 0.0,
+    "road_condition": 0.8,
+    "signage_quality": 0.5,
+    "vru_exposure": 0.5,
+    "visibility_quality": 0.8,
+    "reasoning": "The image shows a clear road with good visibility, but there is no pedestrian or cyclist infrastructure, and no visible roadside activity. The road condition is good, but the signage is not clearly visible, and there is some exposure of vehicles to the camera.",
+    "image_count": 1
+  },
+  "17489": {
+    "pedestrian_infra": 0.0,
+    "cyclist_infra": 0.0,
+    "roadside_activity": 0.0,
+    "road_condition": 0.65,
+    "signage_quality": 0.4,
+    "vru_exposure": 0.65,
+    "visibility_quality": 0.65,
+    "reasoning": "The photograph shows a clear, well-maintained road with good visibility and no immediate safety concerns. However, there is no pedestrian or cyclist infrastructure present, and no signs of roadside activity. The road condition and signage are good, but the absence of pedestrian and cyclist infrastructure is a significant safety concern.",
+    "image_count": 2
+  },
+  "30226": {
+    "pedestrian_infra": 0.0,
+    "cyclist_infra": 0.0,
+    "roadside_activity": 0.0,
+    "road_condition": 0.8,
+    "signage_quality": 0.5,
+    "vru_exposure": 0.5,
+    "visibility_quality": 0.8,
+    "reasoning": "The image shows a clear road with good visibility, but there is no pedestrian or cyclist infrastructure, and no visible roadside activity. The road condition is good, but the signage is not clearly visible.",
+    "image_count": 1
+  },
+  "33996": {
+    "pedestrian_infra": 0.5,
+    "cyclist_infra": 0.0,
+    "roadside_activity": 0.3,
+    "road_condition": 0.8,
+    "signage_quality": 0.7,
+    "vru_exposure": 0.7,
+    "visibility_quality": 0.9,
+    "reasoning": "The street has good road condition and clear sightlines, but lacks dedicated infrastructure for pedestrians and cyclists, and the signage is not clearly legible.",
+    "image_count": 3
+  }
+}
