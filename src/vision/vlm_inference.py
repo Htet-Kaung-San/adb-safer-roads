@@ -19,7 +19,7 @@ import json
 import logging
 import re
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List, Dict
 
 import torch
 
@@ -113,11 +113,16 @@ class VLMRoadAnalyzer:
         logger.info("vLLM engine ready.")
 
     def _parse_response(self, text: str) -> dict:
-        """Extract JSON from model output; return NULL_FEATURES on failure."""
+        """Extract JSON from model output; strip // comments before parsing."""
         try:
             match = re.search(r"\{.*\}", text, re.DOTALL)
             if match:
-                parsed = json.loads(match.group())
+                raw = match.group()
+                # Strip // inline comments (not valid JSON but model adds them)
+                raw = re.sub(r"//[^\n]*", "", raw)
+                # Remove trailing commas before } or ]
+                raw = re.sub(r",\s*([}\]])", r"\1", raw)
+                parsed = json.loads(raw)
                 for key in FEATURE_KEYS:
                     if key in parsed:
                         parsed[key] = float(parsed[key])
@@ -127,7 +132,7 @@ class VLMRoadAnalyzer:
         logger.warning(f"VLM parse failed on: {text[:200]!r}")
         return {}
 
-    def _run_hf(self, image_paths: list[Path]) -> list[dict]:
+    def _run_hf(self, image_paths: List[Path]) -> List[Dict]:
         """Run inference on a list of images, return one dict per image."""
         from PIL import Image
 
@@ -154,7 +159,7 @@ class VLMRoadAnalyzer:
                 ).to(self._model.device)
 
                 with torch.no_grad():
-                    out = self._model.generate(**inputs, max_new_tokens=256, do_sample=False)
+                    out = self._model.generate(**inputs, max_new_tokens=512, do_sample=False)
 
                 decoded = self._processor.decode(
                     out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True
@@ -166,7 +171,7 @@ class VLMRoadAnalyzer:
 
         return results
 
-    def analyze_segment(self, image_paths: list[Path]) -> dict:
+    def analyze_segment(self, image_paths: List[Path]) -> dict:
         """
         Analyze 1-3 images for a single road segment.
         Returns averaged feature dict, or NULL_FEATURES if no imagery.
@@ -195,9 +200,9 @@ class VLMRoadAnalyzer:
 
     def analyze_batch(
         self,
-        segment_image_map: dict[str, list[Path]],
+        segment_image_map: Dict[str, List[Path]],
         batch_size: int = 16,
-    ) -> dict[str, dict]:
+    ) -> Dict[str, Dict]:
         """
         Analyze a dict of {segment_id: [image_paths]}.
         Returns {segment_id: feature_dict}.
@@ -215,7 +220,7 @@ class VLMRoadAnalyzer:
 
         return results
 
-    def _run_vllm(self, image_paths: list[Path]) -> list[dict]:
+    def _run_vllm(self, image_paths: List[Path]) -> List[Dict]:
         """vLLM batch inference path (used for 72B on the cluster)."""
         from vllm import SamplingParams
         from PIL import Image

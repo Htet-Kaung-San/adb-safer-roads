@@ -39,11 +39,16 @@ class MapillaryClient:
         for attempt in range(retries):
             try:
                 r = self.session.get(url, params=params, timeout=15)
+                # 500 from Mapillary = no coverage at this location; treat as empty
+                if r.status_code == 500:
+                    return {}
                 r.raise_for_status()
                 return r.json()
-            except requests.RequestException as e:
+            except requests.HTTPError:
+                return {}
+            except requests.RequestException:
                 if attempt == retries - 1:
-                    raise
+                    return {}
                 time.sleep(2 ** attempt)
         return {}
 
@@ -113,18 +118,21 @@ class MapillaryClient:
         """
         Convenience: fetch + download images for one segment, using a
         cache directory keyed by segment_id. Returns local file paths.
+        Retries with progressively larger radius if no images found.
         """
         cache_dir = MAPILLARY_CACHE_DIR / str(segment_id)
-        # Skip API call if already cached
         existing = list(cache_dir.glob("*.jpg")) if cache_dir.exists() else []
         if existing:
             return existing
 
-        images = self.fetch_images_for_segment(lat, lon, radius_m, max_images)
-        if not images:
-            logger.debug(f"No Mapillary images near segment {segment_id} ({lat:.5f}, {lon:.5f})")
-            return []
-        return self.download_images(images, cache_dir)
+        # Try increasing radii: 50m → 150m → 500m
+        for r in [radius_m, radius_m * 3, radius_m * 10]:
+            images = self.fetch_images_for_segment(lat, lon, r, max_images)
+            if images:
+                return self.download_images(images, cache_dir)
+
+        logger.debug(f"No Mapillary imagery for segment {segment_id} ({lat:.5f}, {lon:.5f})")
+        return []
 
     @staticmethod
     def _bbox(lat: float, lon: float, radius_m: int) -> str:
