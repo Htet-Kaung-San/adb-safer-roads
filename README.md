@@ -3,6 +3,8 @@
 **ADB AI for Safer Roads Innovation Challenge 2026**  
 *Team: hksamm | Pusan National University, Republic of Korea*
 
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue) ![License](https://img.shields.io/badge/License-MIT-green) ![Validation](https://img.shields.io/badge/Validation-80%2C849%20crash%20records-red) ![Model](https://img.shields.io/badge/VLM-Qwen2--VL--72B-purple)
+
 A five-stage multimodal AI pipeline that assesses whether posted speed limits align with WHO Safe System principles — identifying every road segment where the limit itself endangers lives, quantifying the economic cost of inaction, and producing a ranked intervention portfolio governments can act on immediately.
 
 ---
@@ -22,20 +24,22 @@ A five-stage multimodal AI pipeline that assesses whether posted speed limits al
 
 ---
 
-## Interactive Dashboard
+## Interactive Maps & Dashboard
 
-> **Live demo:** run locally in one command:
+### Lightweight Priority Map (committed, opens in browser)
+
+> **Open directly:** [`outputs/maps/priority_grade_D_map.html`](outputs/maps/priority_grade_D_map.html)
+
+Click any segment to see: speed profile, Safe System threshold, Nilsson fatality reduction, economic value, crash records (2019–22), population density, OSM infrastructure cross-validation (sidewalk, lighting, lanes, maxspeed).
+
+### Full Streamlit Dashboard (run locally)
+
 > ```bash
 > pip install streamlit streamlit-folium plotly
 > streamlit run app.py
 > ```
 
-The Streamlit dashboard provides:
-- **Interactive map** — click any segment to see grade, CI badge, speed profile, economic value, archetype, intervention
-- **Priority ranking table** — filterable by region, grade, archetype; download as CSV
-- **Portfolio optimiser** — visual budget scenario analysis (10–500 segments)
-- **Archetype explorer** — distribution charts and intervention guidance per cluster
-- **Methodology reference** — pipeline diagram, thresholds, Nilsson formula
+Provides 6 tabs: interactive map, priority ranking, portfolio optimiser, archetype explorer, crash validation, methodology reference.
 
 ---
 
