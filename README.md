@@ -361,13 +361,16 @@ In data-scarce environments, 85th-percentile speeds can be estimated from road g
 
 ## Data Sources
 
-| Source | Description |
-|---|---|
-| TomTom Move (via ADB) | GPS probe: 85th-pct speed, posted limit, % exceeding limit, traffic volume |
-| Overture Maps | Road network: functional class, segment geometry |
-| NASA GRUMP | Urban/rural land use classification |
-| Mapillary | Street-level imagery (public API) |
-| ADB Road Safety SPI | Helmet-wearing rates by region, land use, road user type |
+| Source | Type | Description |
+|---|---|---|
+| TomTom Move (via ADB) | Provided | GPS probe: 85th-pct speed, posted limit, % exceeding limit, traffic volume |
+| Overture Maps | Provided | Road network: functional class, segment geometry |
+| NASA GRUMP | Provided | Urban/rural land use classification |
+| ADB Road Safety SPI | Provided | Helmet-wearing rates by region, land use, road user type |
+| **Mapillary** | **External (free)** | Street-level imagery — 8,900+ images via public Graph API |
+| **WorldPop 2020 (1km)** | **External (CC BY 4.0)** | Per-segment population density for VRU exposure enrichment |
+| **Thailand MOT/TRAMS** | **External (Open Data Common)** | 80,849 GPS crash records 2019–2022 for ground-truth validation |
+| **OpenStreetMap** | **External (ODbL)** | Sidewalk/crossing/traffic calming tags via Overpass API |
 
 ## Attribution
 
