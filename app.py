@@ -193,6 +193,26 @@ with tab_map:
         prank   = row.get("priority_rank_global", "")
         pop_density = row.get("population_per_km2", None)
         crash_count = row.get("crash_count", None)
+        osm_score   = row.get("osm_infrastructure_score", None)
+        osm_sidewalk = row.get("osm_has_sidewalk", None)
+        osm_lit      = row.get("osm_lit", None)
+        osm_maxspeed = row.get("osm_maxspeed_kmh", None)
+        osm_lanes    = row.get("osm_lanes", None)
+
+        def osm_bool(val):
+            if val is None or (isinstance(val, float) and val != val):
+                return "—"
+            return "Yes" if str(val).lower() in ("true", "1") else "No"
+
+        osm_row = ""
+        if osm_score is not None and not (isinstance(osm_score, float) and osm_score != osm_score):
+            osm_row = f"""
+              <tr style="background:#f8fafc"><td colspan="2" style="padding-top:4px"><b>OSM Infrastructure</b></td></tr>
+              <tr><td>Sidewalk</td><td>{osm_bool(osm_sidewalk)}</td></tr>
+              <tr><td>Street lighting</td><td>{osm_bool(osm_lit)}</td></tr>
+              <tr><td>OSM max speed</td><td>{f"{osm_maxspeed:.0f} km/h" if osm_maxspeed else "—"}</td></tr>
+              <tr><td>Lanes</td><td>{f"{int(osm_lanes)}" if osm_lanes else "—"}</td></tr>
+              <tr><td>Infra score</td><td>{f"{osm_score:.2f}/1.0" if osm_score is not None else "—"}</td></tr>"""
 
         popup_html = f"""
         <div style="font-family:sans-serif;min-width:280px;max-width:340px">
@@ -214,6 +234,7 @@ with tab_map:
               <tr><td>Population density</td><td>{f"{pop_density:,.0f} persons/km²" if pop_density else "—"}</td></tr>
               <tr><td>Crash records (2019–22)</td><td>{f"{int(crash_count)}" if crash_count else "—"}</td></tr>
               <tr><td>Global priority rank</td><td>#{prank}</td></tr>
+              {osm_row}
             </table>
             <hr style="margin:6px 0">
             <span style="font-size:12px">{arch_icon} <b>{arch}</b></span><br>

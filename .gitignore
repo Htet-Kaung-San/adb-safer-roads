@@ -18,6 +18,8 @@ data/processed/mapillary_cache/
 # Large processed outputs (use Git LFS or host separately)
 outputs/scores/*.geojson
 outputs/maps/*.html
+# But allow the lightweight priority map (1.67MB)
+!outputs/maps/priority_grade_D_map.html
 
 # Jupyter
 .ipynb_checkpoints/
