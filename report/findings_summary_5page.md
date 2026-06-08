@@ -89,9 +89,9 @@ The model was built with zero access to crash data. It was then tested against *
 
 | Test | Result |
 |---|---|
-| Spearman ρ (score vs. crash density) | **ρ = 0.093, p = 3.28×10⁻¹⁵** |
+| Spearman ρ (score vs. crash density) | **ρ = 0.093, p = 3.28e-15** |
 | AUC (score predicts crash hotspot binary) | **0.582** |
-| Mann-Whitney U (Grade D crash rate > Grade B) | **p = 3.79×10⁻⁷** |
+| Mann-Whitney U (Grade D crash rate > Grade B) | **p = 3.79e-7** |
 | Crashes spatially matched to segments | **71,362 / 80,849 (88.3%)** |
 
 **The headline result: fatality rate increases monotonically with grade — without the model ever seeing crash data.**
@@ -105,7 +105,7 @@ The model was built with zero access to crash data. It was then tested against *
 
 Grade D segments are 3.6% of the network but account for 4.7% of all fatalities. Their fatality rate is **1.7× higher than Grade B**, despite lower absolute crash count — because at extreme speed excess, crashes are rarer but almost always fatal. Grade C has the highest crash frequency because it combines high traffic volume with speed excess; Grade D has the highest fatality severity because it adds extreme speed on lower-volume roads. Both patterns are consistent with Safe System theory, and the model recovers them zero-shot.
 
-Note on validation metrics: AUC 0.582 and Spearman ρ 0.093 are modest in magnitude but highly statistically significant (p < 10⁻¹⁴). Speed is one of many crash determinants — road geometry, driver behaviour, weather, intersection density all contribute. A model scoring purely on speed-limit alignment correctly identifying 58% of crash hotspots without training on any crash outcome is a meaningful result, not a limitation.
+Note on validation metrics: AUC 0.582 and Spearman rho 0.093 are modest in magnitude but highly statistically significant (p < 1e-14). Speed is one of many crash determinants — road geometry, driver behaviour, weather, and intersection density all contribute. A model scoring purely on speed-limit alignment that correctly identifies 58% of crash hotspots without training on any crash outcome is a meaningful result, not a limitation.
 
 **OSM infrastructure cross-validation:** The top 100 priority segments in both regions were queried against OpenStreetMap independently of the model. Across 95 enriched segments in both countries combined: **0% have a sidewalk, 0% have a pedestrian crossing, 0% have traffic calming.** Maharashtra's average infrastructure score is 0.000 / 1.0 — the theoretical minimum. The world's most comprehensive crowd-sourced road database confirms the AI model is identifying structurally unprotected corridors, not statistical noise.
 
@@ -144,7 +144,3 @@ Where GPS probe data (TomTom/HERE) is unavailable, 85th-percentile operating spe
 
 Speed limit misalignment is not unique to Thailand and Maharashtra. It is the default condition in most middle-income country urban road networks, where limits were set for traffic engineering reasons decades ago and have not been revisited in light of road user composition changes, urbanisation, or Safe System evidence. This model makes the misalignment visible, quantified, and actionable — at scale, at low cost, and with validated accuracy.
 
----
-
-*Full source code, scored GeoJSON outputs, interactive priority map, ranked intervention CSVs, per-segment policy briefs:*
-*github.com/Htet-Kaung-San/adb-safer-roads | Compute: 8× NVIDIA RTX A5000, 192 GB VRAM — Pusan National University GenAI Lab*
