@@ -43,3 +43,4 @@ Thumbs.db
 data/external/
 # External crash data GeoJSON
 outputs/validation/crash_data_thailand.geojson
+.github/workflows/test.yml
