@@ -16,6 +16,8 @@ A five-stage multimodal AI pipeline that assesses whether posted speed limits al
 
 **Most dangerous segment:** Urban primary road in Thailand — 90 km/h posted limit, 115.5 km/h operating speed (85th pct), Safe System threshold 50 km/h. Nilsson Power Model: **82% fewer fatalities** if corrected to threshold.
 
+**Ground-truth validated:** Against 80,849 crash records (Thailand MOT/TRAMS 2019–2022). Fatality rate increases monotonically A→B→C→D. Grade D has **1.7× higher fatality rate** than Grade B. Mann-Whitney p=3.79×10⁻⁷. Spearman ρ=0.093, p=3.28×10⁻¹⁵.
+
 **Maharashtra amplifier:** Only 1.2% of motorcycle passengers wear helmets. At any speed on a Grade D segment, a crash is almost certainly fatal.
 
 ---

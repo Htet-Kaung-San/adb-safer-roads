@@ -36,3 +36,8 @@ Thumbs.db
 *.bin
 *.pt
 *.safetensors
+
+# External crash data (large raw files — download via scripts/validate_with_crash_data.py)
+data/external/
+# External crash data GeoJSON
+outputs/validation/crash_data_thailand.geojson

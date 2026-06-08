@@ -1,0 +1,43 @@
+{
+  "segments_with_crashes": 7109,
+  "total_crash_records": 71362,
+  "spearman_rho": 0.0933,
+  "spearman_pval": 0.0,
+  "auc_grade_d_vs_hotspot": 0.5028,
+  "auc_continuous_score": 0.582,
+  "average_precision": 0.1222,
+  "grade_d_network_pct": 3.6,
+  "grade_d_crash_pct": 3.37,
+  "grade_d_fatality_pct": 4.67,
+  "grade_d_speed_crash_pct": 3.17,
+  "grade_d_avg_annual_crashes": 1.4975,
+  "non_grade_d_avg_crashes": 1.6063,
+  "grade_d_crash_enrichment": 0.93,
+  "grade_breakdown": [
+    {
+      "grade": "A",
+      "n": 128,
+      "avg_crash_rate": 0.376953125,
+      "avg_fatalities": 0.0390625
+    },
+    {
+      "grade": "B",
+      "n": 5019,
+      "avg_crash_rate": 1.2068141063956963,
+      "avg_fatalities": 0.171946602908946
+    },
+    {
+      "grade": "C",
+      "n": 5586,
+      "avg_crash_rate": 1.9933315431435732,
+      "avg_fatalities": 0.2724668814894379
+    },
+    {
+      "grade": "D",
+      "n": 401,
+      "avg_crash_rate": 1.4975062344139651,
+      "avg_fatalities": 0.29177057356608477
+    }
+  ],
+  "mannwhitney_D_vs_B_pval": 3.8e-07
+}
