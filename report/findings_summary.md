@@ -94,9 +94,15 @@ Fallback (no imagery): 0.60 × (Stage 1) + 0.40 × (GNN)
 
 ### 1.3 Data Sources
 
-- **ADB Challenge Dataset**: TomTom GPS probe data, Overture road network, NASA GRUMP land use
-- **Mapillary**: Crowdsourced street-level imagery via public Graph API
-- **ADB Road Safety SPI**: Helmet-wearing rates (Thailand 77.8%, Maharashtra 20.9%)
+| Source | Type | Use |
+|---|---|---|
+| ADB Challenge Dataset | Provided | TomTom GPS probe data, Overture road network, NASA GRUMP land use |
+| Mapillary Graph API | External (free) | Street-level imagery for VLM and YOLO |
+| ADB Road Safety SPI | Provided | Helmet-wearing rates by region |
+| **WorldPop 2020 (1km)** | **External (CC BY 4.0)** | **Per-segment population density — VRU exposure enrichment** |
+| **Thailand MOT/TRAMS** | **External (Open Data Common)** | **80,849 crash records (2019–2022) — ground-truth validation** |
+
+**WorldPop integration:** Per-segment population density was extracted from the WorldPop 2020 1km population grid (worldpop.org, CC BY 4.0 license) for all 14,711 segments. This upgrades the VRU vulnerability sub-score from a regional constant (helmet rate only) to a per-segment measure combining helmet rate and local population exposure. Thailand Grade D segments in central Bangkok corridors have population densities of 3,700–5,400 persons/km², making their risk profile materially different from identical-speed segments in peri-urban areas.
 
 ---
 
