@@ -376,6 +376,18 @@ In data-scarce environments, 85th-percentile speeds can be estimated from road g
 | **Thailand MOT/TRAMS** | **External (Open Data Common)** | 80,849 GPS crash records 2019–2022 for ground-truth validation |
 | **OpenStreetMap** | **External (ODbL)** | Sidewalk/crossing/traffic calming tags via Overpass API |
 
+## Testing
+
+The scoring logic has a unit test suite covering Safe System thresholds, score bounds, grade assignment, and Nilsson reduction.
+
+```bash
+pip install pytest
+python -m pytest tests/ -v
+# 19 tests, all passing
+```
+
+---
+
 ## Attribution
 
 Road network: © OpenStreetMap contributors, Overture Maps Foundation (ODbL)  
