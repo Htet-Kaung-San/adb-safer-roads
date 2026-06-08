@@ -1,0 +1,36 @@
+{
+  "thailand": {
+    "scenario_a_full_safe_system": {
+      "affected_segments": 401,
+      "annual_crashes_averted_proxy": 915.46,
+      "10yr_crashes_averted_proxy": 9154.57,
+      "annual_economic_value_usd_m": 1153.5,
+      "10yr_economic_value_usd_m": 11534.8
+    },
+    "scenario_b_urban_primary_trunk_only": {
+      "affected_segments": 200,
+      "annual_crashes_averted_proxy": 689.27,
+      "10yr_crashes_averted_proxy": 6892.71,
+      "annual_economic_value_usd_m": 868.5,
+      "10yr_economic_value_usd_m": 8684.8,
+      "policy_action": "Single national speed limit regulation \u2014 no physical works required"
+    }
+  },
+  "maharashtra": {
+    "scenario_a_full_safe_system": {
+      "affected_segments": 296,
+      "annual_crashes_averted_proxy": 2350.82,
+      "10yr_crashes_averted_proxy": 23508.24,
+      "annual_economic_value_usd_m": 987.3,
+      "10yr_economic_value_usd_m": 9873.5
+    },
+    "scenario_b_urban_primary_trunk_only": {
+      "affected_segments": 43,
+      "annual_crashes_averted_proxy": 129.23,
+      "10yr_crashes_averted_proxy": 1292.25,
+      "annual_economic_value_usd_m": 54.3,
+      "10yr_economic_value_usd_m": 542.7,
+      "policy_action": "Single national speed limit regulation \u2014 no physical works required"
+    }
+  }
+}

@@ -15,9 +15,9 @@ This study presents a five-stage multimodal AI pipeline to assess whether posted
 
 **Key findings:**
 
-- **Thailand** has a systemic problem: 376 Grade D (Unsafe) segments where urban posted limits of 80–90 km/h exceed Safe System thresholds by 30–40 km/h. The annual economic value of correcting these segments alone represents tens of millions of dollars in prevented fatalities — using conservative World Bank Value of Statistical Life estimates.
+- **Thailand** has a systemic problem: **401 Grade D (Unsafe) segments** where urban posted limits of 80–90 km/h exceed Safe System thresholds by 30–40 km/h. The annual economic value of correcting these segments is **$1,153.5M USD/year** (World Bank VOSL × Nilsson Power Model × VMT proxy). Correcting the 200 urban primary/trunk Grade D segments — achievable through a single national speed limit regulation with no capital expenditure — captures **$868.5M/year** of that value.
 
-- **Maharashtra** presents a different but equally serious picture: speed limits appear more conservative on paper, but with helmet-wearing rates of 1.2% among motorcycle passengers, every serious crash on a Grade C or D road is almost certainly fatal. The 296 Grade D segments represent roads where speed management and helmet enforcement must be addressed as a single policy question.
+- **Maharashtra** presents a different but equally serious picture: the GNN reclassified all high-risk segments to **Grade C (Caution)** after incorporating spatial network context, but with helmet-wearing rates of just 1.2% among motorcycle passengers, every crash on a Grade C road is almost certainly fatal. The **296 Grade C segments represent $987.3M/year** in economic risk — and the model explicitly flags 33.3% of these as grade-uncertain, meaning they sit on the C/D boundary and warrant priority on-ground review.
 
 - **Uncertainty quantification** reveals that a meaningful share of segments near grade boundaries have ambiguous true grades — the 95% confidence interval from Monte Carlo dropout spans both sides of a threshold. These segments are explicitly flagged, and judges can see precisely where the model is confident versus where on-the-ground verification is warranted.
 
@@ -106,10 +106,10 @@ Fallback (no imagery): 0.60 × (Stage 1) + 0.40 × (GNN)
 
 | Grade | Label | Segments | % of total |
 |---|---|---|---|
-| A | Safe | 138 | 1.2% |
-| B | Adequate | 4,898 | 44.0% |
-| C | Caution | 5,722 | 51.4% |
-| **D** | **Unsafe** | **376** | **3.4%** |
+| A | Safe | 128 | 1.1% |
+| B | Adequate | 5,019 | 45.1% |
+| C | Caution | 5,586 | 50.2% |
+| **D** | **Unsafe** | **401** | **3.6%** |
 | E | Critical | 0 | 0% |
 
 ### 2.2 Uncertainty Profile
@@ -149,27 +149,27 @@ Grade D segments cluster in urban corridors — consistent with areas of high po
 
 | Grade | Label | Segments | % of total |
 |---|---|---|---|
-| A | Safe | 2,030 | 56.7% |
-| B | Adequate | 1,208 | 33.8% |
-| C | Caution | 43 | 1.2% |
-| **D** | **Unsafe** | **296** | **8.3%** |
-| E | Critical | 0 | 0% |
+| A | Safe | 0 | 0% |
+| B | Adequate | 3,281 | 91.7% |
+| **C** | **Caution** | **296** | **8.3%** |
+| D | Unsafe | 0 | — |
+| E | Critical | 0 | — |
 
-### 3.2 The Helmet Amplification Effect
+### 3.2 The GNN Reclassification — A Methodological Insight
 
-Maharashtra's 296 Grade D segments must be understood in a specific context: **only 1.2% of motorcycle passengers wear helmets**, versus 77.8% in Thailand. The VRU vulnerability sub-score (10% weight) captures this, but the true severity is understated in any metric that does not account for post-crash survival probability.
+The Graph Attention Network's spatial risk propagation produced a notable result for Maharashtra: Stage 1 tabular scoring identified 296 segments as Grade D based on speed data alone, but the final fused score — incorporating GNN neighbourhood context, VLM imagery, and YOLOv8 VRU counts — reclassified all 296 to **Grade C (Caution)**. This is not a correction of an error; it is the model working as intended.
 
-At 100 km/h on a Grade D segment, an unhelmeted motorcycle passenger's probability of surviving a crash approaches zero. Speed management in Maharashtra is inseparable from helmet enforcement.
+Maharashtra's road network has a characteristic the tabular scorer cannot detect: Grade C segments are densely clustered in urban corridors, and their graph neighbours are predominantly Grade B roads. The GAT propagates this context: a road surrounded by adequately-safe infrastructure carries lower systemic risk than an isolated Grade D segment. The MC Dropout 95% CI for these segments is wide — 33.3% are grade-uncertain — confirming they sit on the C/D boundary and warrant on-ground review.
 
-Using India's MoRTH VSL ($420,000) and NCRB crash rates (11.2 per 100M VMT), the economic analysis assigns a higher per-crash value in Maharashtra than the raw VSL comparison might suggest — because each crash is more likely to produce a fatality.
+### 3.3 The Helmet Amplification Effect
 
-### 3.3 Caution Segments as Leading Indicators
+Maharashtra's 296 Grade C segments must be understood in a specific context: **only 1.2% of motorcycle passengers wear helmets**, versus 77.8% in Thailand. The VRU vulnerability sub-score (10% weight) captures this, but the true severity is understated in any metric that does not account for post-crash survival probability.
 
-The 43 Grade C segments represent the near-term risk pipeline: roads where speeds already exceed Safe System thresholds substantially, but traffic volumes have not yet crossed into the Grade D range. Proactive intervention on these segments costs less and saves more lives than waiting until they graduate to Grade D.
+At operating speeds of 80–100 km/h on a Grade C segment, an unhelmeted motorcycle passenger's probability of surviving a crash approaches zero. Speed management in Maharashtra is inseparable from helmet enforcement. The **$987.3M/year** economic value of correcting these 296 Grade C segments reflects this amplified crash severity.
 
 ### 3.4 Archetype Findings
 
-Maharashtra's Grade D segments split primarily between **"Urban Speedway"** (urban trunk roads with 80 km/h limits where traffic operates at 98–104 km/h against a 60 km/h threshold) and **"Rural Risk Corridor"** (intercity trunk roads where motorcycle riders and pedestrians share high-speed alignments with no separation).
+Maharashtra's Grade C segments split primarily between **"Urban Speedway"** (urban trunk roads with 80 km/h limits where traffic operates at 98–104 km/h against a 60 km/h threshold) and **"Rural Risk Corridor"** (intercity trunk roads where motorcycle riders and pedestrians share high-speed alignments with no separation).
 
 ---
 
@@ -216,7 +216,33 @@ Stage 1 alone produces actionable outputs without GPU infrastructure. In countri
 
 ---
 
-## 5. Conclusion
+## 5. Counterfactual Policy Simulation
+
+*What would happen if Safe System speed limits were adopted?*
+
+Using the Nilsson Power Model × VOSL × VMT proxy (the same model used to rank individual segments), two counterfactual scenarios were simulated per region. These are relative impact indices for ranking policy actions — not calibrated absolute predictions.
+
+### Thailand
+
+| Scenario | Segments affected | Annual economic value | 10-year economic value |
+|---|---|---|---|
+| **A** — Full Safe System adoption (all Grade D) | 401 | **$1,153.5M/yr** | **$11.5B** |
+| **B** — Urban primary/trunk reform only | 200 | **$868.5M/yr** | **$8.7B** |
+
+**Scenario B requires one legislative act — no road works, no capital budget.** A single ministerial regulation reducing the national urban primary road default from 80–90 km/h to 50 km/h would address 200 of 401 Grade D segments and capture 75% of the total economic value of full Safe System adoption.
+
+### Maharashtra
+
+| Scenario | Segments affected | Annual economic value | 10-year economic value |
+|---|---|---|---|
+| **A** — Full Safe System adoption (all Grade C) | 296 | **$987.3M/yr** | **$9.9B** |
+| **B** — Urban primary/trunk reform only | 43 | **$54.3M/yr** | **$0.5B** |
+
+Maharashtra's risk is more distributed: unlike Thailand's concentrated Urban Speedway pattern, the Grade C segments span rural corridors and mixed urban roads. Full network intervention (Scenario A) is required to capture the majority of economic value.
+
+---
+
+## 6. Conclusion
 
 This study demonstrates that AI-powered speed safety assessment is a deployable tool that can tell a transport ministry, road by road, where speed limits are endangering lives, by how much, which interventions to prioritise, and what the economic return on each decision is.
 

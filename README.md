@@ -9,14 +9,31 @@ A five-stage multimodal AI pipeline that assesses whether posted speed limits al
 
 ## Live Results
 
-| Region | Segments | Grade D Unsafe | Grade E Critical | Annual Eco. Value (D/E) |
+| Region | Segments | Grade D Unsafe | Grade C Caution | Annual Eco. Value |
 |---|---|---|---|---|
-| Thailand | 11,134 | 376 | — | see outputs/priority/ |
-| Maharashtra, India | 3,577 | 296 | — | see outputs/priority/ |
+| Thailand | 11,134 | **401** ($1,153.5M/yr) | 5,586 | $1,153.5M (D) |
+| Maharashtra, India | 3,577 | 0 (GNN reclassified to C) | **296** ($987.3M/yr) | $987.3M (C) |
 
 **Most dangerous segment:** Urban primary road in Thailand — 90 km/h posted limit, 115.5 km/h operating speed (85th pct), Safe System threshold 50 km/h. Nilsson Power Model: **82% fewer fatalities** if corrected to threshold.
 
 **Maharashtra amplifier:** Only 1.2% of motorcycle passengers wear helmets. At any speed on a Grade D segment, a crash is almost certainly fatal.
+
+---
+
+## Interactive Dashboard
+
+> **Live demo:** run locally in one command:
+> ```bash
+> pip install streamlit streamlit-folium plotly
+> streamlit run app.py
+> ```
+
+The Streamlit dashboard provides:
+- **Interactive map** — click any segment to see grade, CI badge, speed profile, economic value, archetype, intervention
+- **Priority ranking table** — filterable by region, grade, archetype; download as CSV
+- **Portfolio optimiser** — visual budget scenario analysis (10–500 segments)
+- **Archetype explorer** — distribution charts and intervention guidance per cluster
+- **Methodology reference** — pipeline diagram, thresholds, Nilsson formula
 
 ---
 
