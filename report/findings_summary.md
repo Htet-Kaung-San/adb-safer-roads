@@ -120,7 +120,7 @@ Fallback (no imagery): 0.60 × (Stage 1) + 0.40 × (GNN)
 
 ### 2.2 Uncertainty Profile
 
-Of the 376 Grade D segments, a subset have 95% CIs that narrow on the C/D boundary — meaning some are robustly Grade D (CI entirely within 60–80) while others could be Grade C under a slightly different data realisation. The model flags these explicitly rather than treating the boundary as definitive.
+Of the 401 Grade D segments, a subset have 95% CIs that narrow on the C/D boundary — meaning some are robustly Grade D (CI entirely within 60–80) while others could be Grade C under a slightly different data realisation. The model flags these explicitly rather than treating the boundary as definitive.
 
 ### 2.3 The Highest-Risk Segment
 
@@ -139,7 +139,7 @@ Using World Bank VSL for Thailand ($1.26M) and IRTAD crash rates (8.4 fatal cras
 
 ### 2.5 Archetype Breakdown
 
-The 376 Grade D segments cluster into archetypes. The dominant pattern is **"Urban Speedway"** — Thailand's urban default speed limits of 80–90 km/h on primary roads are a policy-level misalignment, not a road-by-road problem. A single legislative decision to align urban primary road limits with Safe System principles would address the majority of Grade D risk.
+The 401 Grade D segments cluster into archetypes. The dominant pattern is **"Urban Speedway"** — Thailand's urban default speed limits of 80–90 km/h on primary roads are a policy-level misalignment, not a road-by-road problem. A single legislative decision to align urban primary road limits with Safe System principles would address the majority of Grade D risk.
 
 The **"Infrastructure Void"** archetype captures a secondary cluster: urban roads where VLM analysis identifies no pedestrian separation and object detection confirms high pedestrian presence. These require physical infrastructure investment, not merely a limit change.
 
@@ -185,7 +185,7 @@ Maharashtra's Grade C segments split primarily between **"Urban Speedway"** (urb
 
 **Thailand:**
 1. **Emergency review** of the top-10 segments by economic impact index (see `outputs/priority/top10_emergency.csv`): reduce posted limits to 60 km/h as interim measure; deploy average-speed enforcement cameras
-2. **Systematic urban speed audit** of all 376 Grade D segments; prioritise those with `archetype_name = "Urban Speedway"` where the limit change is the primary intervention and requires no physical works
+2. **Systematic urban speed audit** of all 401 Grade D segments; prioritise those with `archetype_name = "Urban Speedway"` where the limit change is the primary intervention and requires no physical works
 3. **National urban speed limit reform**: set a default urban primary road limit of 50 km/h in line with Safe System — Thailand's current 80–90 km/h default is globally exceptional and drives the majority of Grade D risk
 
 **Maharashtra:**

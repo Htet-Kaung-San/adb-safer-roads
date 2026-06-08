@@ -166,7 +166,7 @@ The 401 Grade D segments represent a systemic policy problem, not isolated dange
 
 Economic value: $1,153.5M/yr (Grade D). One national regulation correcting urban primary/trunk limits to 50 km/h addresses 200 of 401 Grade D segments and captures $868.5M/yr of that value with no capital expenditure required.
 
-Highest-priority segment: Phahon Yothin Road (secondary URBAN) — $51.4M/yr, 95% Nilsson reduction. Top archetype: Urban Speedway (275 segments, avg Nilsson 95.3%).
+Highest-priority segment: Phahon Yothin Road (secondary URBAN) — $51.4M/yr, 95% Nilsson reduction. Top archetype: Urban Speedway (392/401 segments, avg Nilsson 95.3%).
 
 Crash validation: Grade D segments contain 4.7% of all fatalities despite being 3.6% of the network. Grade D fatality rate is 1.7× higher than Grade B.
 
