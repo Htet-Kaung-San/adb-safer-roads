@@ -1,0 +1,6 @@
+archetype,count,avg_final_score,avg_nilsson_pct,avg_economic_benefit_m,total_economic_benefit_m,primary_intervention,icon
+High-Volume Corridor,44,44.4,60.9,11.3,497.16,Peak-hour variable speed limits + congestion-responsive enforcement,🚗
+Infrastructure Void,115,43.4,35.5,3.46,397.76,"Physical separation: pedestrian bridges, crash barriers, protected crossings",🚶
+Speed Creep Zone,37,43.3,53.7,1.12,41.42,Speed camera deployment (fixed + average) + signage visibility audit,⚡
+Rural Risk Corridor,86,44.6,61.3,0.44,37.72,"Roadside safety treatment: barriers, clear zones, hazard removal",🌾
+Urban Speedway,14,47.1,78.5,0.95,13.29,National speed limit policy reform + average speed enforcement,🏙️

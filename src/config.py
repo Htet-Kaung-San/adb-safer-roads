@@ -1,5 +1,5 @@
 """
-Central configuration: paths, Safe System thresholds, scoring weights.
+Central configuration: paths, Safe System thresholds, scoring weights, economic constants.
 """
 from pathlib import Path
 
@@ -16,9 +16,9 @@ THAILAND_GEOJSON = ROOT / "ADB_Innovation_Thailand.geojson"
 HELMET_SPI_XLSX = ROOT / "Archive" / "Road_Safety_Performance_Indicators_(Helmet_Wearing_results)_(adb_dashboard_data_v02).xlsx"
 
 # ── Safe System Speed Thresholds (km/h) ───────────────────────────────────
-# Based on WHO Safe System principles and UNECE road safety targets.
-# Thresholds represent the maximum speed at which the given road type/context
-# is considered safe for all road users including pedestrians and cyclists.
+# WHO Safe System principles and UNECE road safety targets.
+# Represents the maximum speed at which the road type/context is safe for
+# all road users including pedestrians and cyclists.
 SAFE_SYSTEM_THRESHOLDS = {
     # (road_class, land_use) -> safe speed in km/h
     ("motorway",  "RURAL"):  110,
@@ -48,7 +48,7 @@ HELMET_SPI = {
     "Pune":        0.213,
 }
 
-# Baseline (best-practice) helmet rate to normalize against
+# Baseline (best-practice) helmet rate to normalise against
 HELMET_BASELINE = 0.90
 
 # ── Speed Safety Score Weights (must sum to 100) ──────────────────────────
@@ -76,6 +76,70 @@ NILSSON_EXPONENTS = {
     "all_injury":     2.0,
 }
 
+# ── Economic Impact Parameters ────────────────────────────────────────────
+# Value of Statistical Life (USD) — used to monetise fatality reduction estimates.
+# Sources: World Bank upper-middle income country estimates; India MoRTH IRC:SP:88.
+VOSL_USD = {
+    "thailand":    1_260_000,   # World Bank VSL for upper-middle income (Thailand 2023)
+    "maharashtra":   420_000,   # India MoRTH IRC:SP:88 adjusted to USD at 2024 rates
+    "default":       800_000,
+}
+
+# Annual fatal crash rate per 100 million vehicle-kilometres.
+# Sources: IRTAD 2022 (Thailand), NCRB Road Accidents in India 2022 (Maharashtra).
+CRASH_RATE_PER_100M_VMT = {
+    "thailand":    8.4,
+    "maharashtra": 11.2,
+    "default":      9.5,
+}
+
+# Traffic volume proxy: map RankedPercentile [0,1] → estimated vehicles/day.
+# Log-linear: 0th percentile ≈ 200 veh/day, 100th percentile ≈ 60,000 veh/day.
+# These are order-of-magnitude estimates for relative economic ranking only.
+TRAFFIC_VOLUME_MIN_VPD = 200
+TRAFFIC_VOLUME_MAX_VPD = 60_000
+
+# ── Segment Archetype Profiles ────────────────────────────────────────────
+# KMeans cluster → human-readable archetype with intervention guidance.
+# Cluster IDs are assigned by matching centroids to these profiles in clustering.py.
+ARCHETYPE_PROFILES = {
+    "Urban Speedway": {
+        "description": "High posted limits on urban primary/secondary roads. Systemic policy misalignment — the limit itself is the problem.",
+        "primary_intervention": "National speed limit policy reform + average speed enforcement",
+        "secondary_intervention": "Urban traffic management centres with variable speed signs",
+        "color": "#e74c3c",
+        "icon": "🏙️",
+    },
+    "High-Volume Corridor": {
+        "description": "Borderline speed excess, but extreme traffic exposure makes every crash statistically likely. Risk scales with volume.",
+        "primary_intervention": "Peak-hour variable speed limits + congestion-responsive enforcement",
+        "secondary_intervention": "Grade-separated pedestrian crossings at highest-volume points",
+        "color": "#e67e22",
+        "icon": "🚗",
+    },
+    "Infrastructure Void": {
+        "description": "Operating speeds that would be marginal on a protected road become lethal because pedestrian and cyclist infrastructure is absent.",
+        "primary_intervention": "Physical separation: pedestrian bridges, crash barriers, protected crossings",
+        "secondary_intervention": "Interim: kerb extensions, raised crossings, road diet",
+        "color": "#9b59b6",
+        "icon": "🚶",
+    },
+    "Speed Creep Zone": {
+        "description": "Posted limit is reasonable relative to Safe System standards, but a large share of drivers routinely exceed it by 20-35 km/h. Enforcement gap.",
+        "primary_intervention": "Speed camera deployment (fixed + average) + signage visibility audit",
+        "secondary_intervention": "Road surface treatments (rumble strips, optical narrowing) to reduce speeds",
+        "color": "#3498db",
+        "icon": "⚡",
+    },
+    "Rural Risk Corridor": {
+        "description": "Rural alignment encourages high speeds; vulnerable road users (motorcyclists, pedestrians) use the road in a context with no separation.",
+        "primary_intervention": "Roadside safety treatment: barriers, clear zones, hazard removal",
+        "secondary_intervention": "Collision warning systems + periodic safety rest areas",
+        "color": "#27ae60",
+        "icon": "🌾",
+    },
+}
+
 # ── Mapillary ─────────────────────────────────────────────────────────────
 MAPILLARY_RADIUS_M = 50          # search radius around segment midpoint
 MAPILLARY_MAX_IMAGES = 3         # images per segment (averaged for robustness)
@@ -94,3 +158,4 @@ GNN_DROPOUT = 0.2
 GNN_EPOCHS = 100
 GNN_LR = 1e-3
 SPATIAL_SNAP_DISTANCE_M = 20  # max distance to link segment endpoints
+GNN_MC_SAMPLES = 50           # Monte Carlo dropout passes for uncertainty estimation

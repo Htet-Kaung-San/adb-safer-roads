@@ -69,13 +69,13 @@ def run():
     seg_map = get_segment_image_map()
     seg_to_region = split_by_region(seg_map)
 
-    logger.info(f"Loading {MODEL_ID} via vLLM (tp={n_gpus}) — this takes ~3-5 minutes...")
+    logger.info(f"Loading {MODEL_ID} via HuggingFace device_map=auto — this takes ~5-10 minutes...")
 
     from src.vision.vlm_inference import VLMRoadAnalyzer
     analyzer = VLMRoadAnalyzer(
         model_id=MODEL_ID,
-        tensor_parallel=n_gpus,
-        use_vllm=True,
+        device="auto",   # HuggingFace distributes layers across all visible GPUs
+        use_vllm=False,
     )
 
     logger.info("Model loaded. Starting inference...")

@@ -1,0 +1,632 @@
+{
+  "1693": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "1757": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "1838": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "1886": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2047": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2084": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2085": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2111": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2146": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2232": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2291": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2496": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2676": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2728": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2755": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2841": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2866": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2867": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2890": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "2980": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3036": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3098": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3112": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3127": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3136": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3149": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3190": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3230": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3334": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3368": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3393": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3397": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3402": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3434": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3463": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3488": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3491": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3525": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3527": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3548": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3558": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3577": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3581": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3614": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3620": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3644": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3677": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3698": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3729": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3742": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3746": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3787": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3798": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3799": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3820": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3822": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3837": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3860": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3933": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3942": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3969": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3972": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  },
+  "3982": {
+    "pedestrian_count": 0,
+    "cyclist_count": 0,
+    "moto_count": 0,
+    "car_count": 0,
+    "total_count": 0,
+    "vru_count": 0,
+    "vru_ratio": 0.0,
+    "images_processed": 0
+  }
+}

@@ -1,35 +1,44 @@
-# Core geospatial
+# ── Core geospatial ────────────────────────────────────────────────────────
 geopandas>=0.14.0
 shapely>=2.0.0
 pyproj>=3.6.0
 fiona>=1.9.0
 
-# Data processing
+# ── Data processing ────────────────────────────────────────────────────────
 pandas>=2.0.0
 numpy>=1.25.0
 scipy>=1.11.0
 openpyxl>=3.1.0
 
-# Visualization
+# ── Visualization ──────────────────────────────────────────────────────────
 folium>=0.15.0
 branca>=0.7.0
 matplotlib>=3.7.0
 seaborn>=0.12.0
 
-# Machine learning / GNN
+# ── Machine learning / GNN ─────────────────────────────────────────────────
 torch>=2.1.0
 torch-geometric>=2.4.0
 scikit-learn>=1.3.0
 
-# Vision / VLM (install on GPU server)
+# ── Clustering & dimensionality reduction ─────────────────────────────────
+# umap-learn>=0.5.0          # optional: richer visualisation of archetype clusters
+
+# ── Vision / VLM (install on GPU server only) ──────────────────────────────
 # transformers>=4.40.0
 # accelerate>=0.25.0
 # Pillow>=10.0.0
-# vllm>=0.4.0  # for 72B with tensor parallelism
+# qwen-vl-utils>=0.0.8
 
-# API
+# ── Object detection (install on GPU server only) ──────────────────────────
+# ultralytics>=8.2.0         # YOLOv8/v10 for VRU counting
+
+# ── Policy brief generation (install when using generate_policy_briefs.py) ─
+# anthropic>=0.25.0          # pip install anthropic
+
+# ── API / networking ───────────────────────────────────────────────────────
 requests>=2.31.0
 
-# Notebooks
+# ── Notebooks ──────────────────────────────────────────────────────────────
 jupyter>=1.0.0
 ipykernel>=6.25.0

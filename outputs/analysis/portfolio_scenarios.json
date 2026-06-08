@@ -1,0 +1,82 @@
+{
+  "10": {
+    "n_selected": 10,
+    "total_economic_usd": 1006922772,
+    "total_economic_m": 1006.92,
+    "avg_nilsson_reduction": 75.2,
+    "grade_distribution": {
+      "C": 10
+    },
+    "regions": {
+      "Thailand": 10
+    }
+  },
+  "25": {
+    "n_selected": 25,
+    "total_economic_usd": 2251222062,
+    "total_economic_m": 2251.22,
+    "avg_nilsson_reduction": 74.7,
+    "grade_distribution": {
+      "C": 25
+    },
+    "regions": {
+      "Thailand": 25
+    }
+  },
+  "50": {
+    "n_selected": 50,
+    "total_economic_usd": 3768777737,
+    "total_economic_m": 3768.78,
+    "avg_nilsson_reduction": 75.9,
+    "grade_distribution": {
+      "C": 49,
+      "D": 1
+    },
+    "regions": {
+      "Thailand": 48,
+      "Maharashtra": 2
+    }
+  },
+  "100": {
+    "n_selected": 100,
+    "total_economic_usd": 6138176569,
+    "total_economic_m": 6138.18,
+    "avg_nilsson_reduction": 75.4,
+    "grade_distribution": {
+      "C": 98,
+      "D": 2
+    },
+    "regions": {
+      "Thailand": 97,
+      "Maharashtra": 3
+    }
+  },
+  "250": {
+    "n_selected": 250,
+    "total_economic_usd": 11048651341,
+    "total_economic_m": 11048.65,
+    "avg_nilsson_reduction": 76.4,
+    "grade_distribution": {
+      "C": 241,
+      "D": 9
+    },
+    "regions": {
+      "Thailand": 243,
+      "Maharashtra": 7
+    }
+  },
+  "500": {
+    "n_selected": 500,
+    "total_economic_usd": 15746832485,
+    "total_economic_m": 15746.83,
+    "avg_nilsson_reduction": 77.7,
+    "grade_distribution": {
+      "C": 477,
+      "D": 23
+    },
+    "regions": {
+      "Thailand": 491,
+      "Maharashtra": 9
+    }
+  }
+}
